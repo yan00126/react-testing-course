@@ -23,4 +23,9 @@ describe("App Component", () => {
     //empty test will pass
     screen.debug();
   });
+
+  test("should render paragraph with correct text", () => {
+    render(<App />);
+    expect(screen.getByText(/library and vitest/i)).toBeInTheDocument();
+  });
 });
